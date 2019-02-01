@@ -84,7 +84,18 @@ App = {
           console.log("error aaya bhai");
       });
 
-      
+      App.contracts.deployed()
+      .then(function(instance){
+          return instance.setPassword(pass);
+      })
+      .then(function(result){
+          console.log("Password store is a success");
+          
+      })
+      .catch(function(err){
+          console.log(err);
+          
+      });
 
     }
 
