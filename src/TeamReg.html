@@ -4,7 +4,6 @@
 <html> 
 
     <head>
-        <script src="jquery.js"></script>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
@@ -12,8 +11,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="css/TeamReg.css">
-
-        <script src="jquery.js"></script> 
         <script> 
             $(function(){
                 $("#new-header").load("base_template.html"); 
@@ -21,19 +18,12 @@
         </script> 
     </head>
     <body>
-    <div id="new-header">
-            <!-- <script>
-                $(document).ready(function(){
-                   $("#new-header").load("base_template.html");
-           });
-           </script> -->
-    </div>
     
     <div class="container-fluid">
         <div id = 'form-block' class="row">
             <div class="col-md-4"></div>
             <div id="form" class="col-md-4">
-                    <form class="form-horizontal" action="/#">
+                    <form class="form-horizontal" action="#" onSubmit="App.store()">
                         <div class="form-group">
                         <label class="control-label col-md-4" for="tname">Team Name:</label>
                         <div class="col-md-8">
@@ -109,6 +99,10 @@
                     </form>
             </div>
             <div class="col-md-4"></div>
+
+            <script src="js/web3.min.js"></script>
+            <script src="js/truffle-contract.js"></script>
+            <script src="js/TeamReg.js"></script>
     </div>
   </body> 
 </html>
