@@ -1,12 +1,18 @@
 #form {
-    border: 10vh;
-    border-width: 5vh;
+    border: 1vh;
+    border-width: 1vh;
     text-align: center;
-    padding: 5vh;
+    padding-top: 2vh;
     background-blend-mode: lighten;
-    
+    font-size: 15px;
+    font-family: Quicksand-Regular
 }
 
 .form_group {
-    padding: 5vh;
+    padding: 0vh;
+}
+
+@font-face{
+    font-family: 'Quicksand-Regular';
+    src: url('Quicksand-Regular.otf') format('opentype');
 }
