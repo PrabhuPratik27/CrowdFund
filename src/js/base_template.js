@@ -1,5 +1,5 @@
-$('.navbar-nav li').click(function(){
-    $('.navbar-nav li').removeClass('active');
-    $(this).addClass('active');
+$('li.navbar-nav ').click(function(){
+    $('li.navbar-nav').removeClass('active');
+    // $(this).addClass('active');
     alert("jquery execured");
 })
