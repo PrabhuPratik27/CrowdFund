@@ -27,50 +27,23 @@
             });
         </script> 
     </div>
-    <div class="container-fluid" >
-        <div id = 'form-block' class="row">
-            <div class="col-md-3"></div>
-            <div id="form" class="col-md-6">
-                    <form class="form-horizontal" action="#" onSubmit="App.store()">
-                        <div class="form-group">
-                        <div class="row">
-                            <label class="control-label col-md-4" for="tname">Project Name:</label>
-                            <div class="col-md-8">
-                                <input type="text" class="form-control" id="tname" placeholder="Enter Project Name">
-                            </div>
-                        </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <label class="control-label col-md-4" for="id">Member 3 ID:</label>
-                                <div class="col-md-8">
-                                    <textarea id="text_area">
-                                        
-                                    </textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <label class="control-label col-md-4" for="pwd">Password:</label>
-                                <div class="col-md-8"> 
-                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
-                                </div>
-                            </div>
-                        </div>
-                        <div id='submit' class="form-group"> 
-                        <div class="col-md-offset-6">
-                            <button type="submit" class="btn btn-success">Submit</button>
-                        </div>
-                        </div>
-                    </form>
+    <div id="cards" class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border border-primary" style="width:25rem">
+                   <img class="card-img-top" src="blockchain.jpg" alt="BLOCKCHAIN" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Project Name</h4>
+                        <p class="card-body">Ethereum is a distributed public block chain network that focuses on running programming code of any decentralized application. More simply, it is a platform for sharing information across the globe that cannot be manipulated or changed.</p>
+                        <p class="card-text">Quotation : $ </p>
+                        <a href="#" class="btn btn-success">Fund Project</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3"></div>
-
-            <script src="js/web3.min.js"></script>
-            <script src="js/truffle-contract.js"></script>
-            <script src="js/TeamReg.js"></script>
+        </div>
     </div>
-    
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/TeamReg.js"></script>
 </body>
 </html>
