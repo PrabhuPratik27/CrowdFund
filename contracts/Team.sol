@@ -15,6 +15,7 @@ contract Teams {
     }
     
     address private owner;
+    string private password;
     
     mapping(uint => Team) public Teammapint;
     mapping(address => Team) public Teammap ;
@@ -33,6 +34,10 @@ contract Teams {
         Teammapint[teamcount] = Team(Tn,fn,sn,tn,ftn,fid,sid,tid,ftid);
         Teammap[msg.sender] = Team(Tn,fn,sn,tn,ftn,fid,sid,tid,ftid);
         
+    }
+    
+    function setPassword(string pass) public{
+        password=pass;
     }
     
     function getTeam() public view returns (string,string,string,string,string,uint,uint,uint,uint){
