@@ -16,3 +16,7 @@
     font-family: 'Quicksand-Regular';
     src: url('Quicksand-Regular.otf') format('opentype');
 }
+
+#submit {
+    padding-top: 3vh; 
+}
