@@ -1,0 +1,27 @@
+body{
+    font-family: CaviarDreams_BOLD;
+    letter-spacing: 2px;
+}
+ul.navbar-nav a{
+    font-size: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+ul.navbar-nav a:hover{
+    background-color: gray;
+    color: aqua;
+    border-radius: 3px;
+    transition: all .1s ease;
+}
+@font-face{
+    font-family: 'LemonMilklight';
+    src: url('LemonMilklight.otf') format('opentype');
+}
+@font-face{
+    font-family: 'CaviarDreams';
+    src: url('CaviarDreams.ttf') format('truetype');
+}
+@font-face{
+    font-family: 'CaviarDreams_Bold';
+    src: url('CaviarDreams_Bold.ttf') format('truetype');
+}
