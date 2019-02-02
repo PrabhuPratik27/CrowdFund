@@ -9,6 +9,10 @@
     margin-top : 10vh;
 }
 
+#cards {
+    padding-top: 10vh;
+}
+
 .form_group {
     padding: 0vh;
 }
