@@ -123,22 +123,23 @@ App ={
 
 
         setTimeout(function(){
-            var embedded = document.querySelector('#embedded');
+            var embedded = $('#embedded');
+            embedded.empty();
 
             console.log(App.Projects);
 
             for(let i=1;i<=App.teamcount;i++){
                 var extra = "<div class=col-md-4>\
-                                    <div class=\"card text-white bg-dark  mb-3 border border-primary\" style=width:25rem>\
+                                    <div class=\"card text-white bg-dark  mb-3 border border-primary\" style=\"width:25rem\">\
                                         <img class=\"card-img-top p-3\" src=blockchain.jpg style=width:100%>\
                                         <div class=card-body>\
-                                            <h4 class=card-title></h4>\
+                                            <h4 class=card-title>this is title</h4>\
                                             <p class=card-body></p>\
                                             <p class=card-text>Quotation : $ </p>\
                                             <a href=# class=\"btn btn-success\">Fund Project</a>\
                                         </div>\
                                     </div>\
-                                </div>"
+                                </div>";
                 embedded.append(extra);
             }
         },1000);
