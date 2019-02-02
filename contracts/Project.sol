@@ -1,24 +1,28 @@
-pragma solidity 0.4.25;
+pragma solidity <= 0.4.25;
 
-contract Projects{
+// import "./Team.sol";
+
+contract Projects {
     
     struct Project {
         
         string title;
         string idea;
         uint fund;
+        string teamleader; 
         
     }
     
-    mapping(address => Project) public Projectmap;
+    mapping(uint => Project) public Projectmap;
     uint public projectCount;
     
-    function setProject(string t,string i,uint f) public {
-        Projectmap[msg.sender] = Project(t,i,f);
+    function setProject(string t,string i,uint f,string tl) public {
+        projectCount++;
+        Projectmap[projectCount] = Project(t,i,f,tl);
     }
-    
-    function getProject() public view returns(string,string,uint){
-        return (Projectmap[msg.sender].title,Projectmap[msg.sender].idea,Projectmap[msg.sender].fund);
+
+    function getProjectbyaddress(uint a) public view returns(string,string,uint){
+        return (Projectmap[a].title,Projectmap[a].idea,Projectmap[a].fund);
     }
     
 }

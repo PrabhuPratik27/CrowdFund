@@ -60,23 +60,7 @@ App = {
       .then(function(instance){
           return instance.setTeam(ten,fn,sn,tn,ftn,fid,sid,tid,ftid);
       })
-      .then(function(result){
-          
-
-          App.contracts.Teams.deployed()
-          .then(function(instance){
-              return instance.getTeam();
-          })
-          .then(function(result){
-              console.log(result);
-
-              console.log(result[5].c[0]); 
-          })
-          .catch(function(err){
-              console.log(err);
-              
-          });
-          
+      .then(function(result){ 
           console.log("Dekh abhi sucess hua hai");
       })
       .catch(function(err){
