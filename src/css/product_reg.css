@@ -1,0 +1,23 @@
+#form {
+    border: 1vh;
+    border-width: 1vh;
+    text-align: center;
+    padding-top: 2vh;
+    background-blend-mode: lighten;
+    font-size: 15px;
+    font-family: Quicksand-Bold;
+    margin-top : 10vh;
+}
+
+.form_group {
+    padding: 0vh;
+}
+
+@font-face{
+    font-family: 'Quicksand-Bold';
+    src: url('Quicksand-Bold.otf') format('opentype');
+}
+
+#submit {
+    padding-top: 3vh; 
+}
