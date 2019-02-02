@@ -21,10 +21,11 @@ contract Teams {
     mapping(address => Team) public Teammap ;
     mapping(uint => address) public Teammapaddr;
     uint public teamcount;
-    mapping(address => string) public PasswordMap;
+    mapping(uint => string) public PasswordMap;
     
     constructor() public {
         
+        teamcount = 0;
         owner = msg.sender;
         
     }

@@ -42,14 +42,14 @@ App={
         var name = document.querySelector('#tname').value;
         var idea = document.querySelector('#text_area').value;
         var quot = document.querySelector('#pwd').value;
+        var tl = document.querySelector('#tl').value
 
         console.log(name,idea,quot);
         
 
         App.contracts.Projects.deployed()
         .then(function(instance){
-            console.log("Inside the promise callback");
-            return instance.setProject(name,idea,quot);
+            return instance.setProject(name,idea,quot,tl);
         })
         .then(function(result){
             console.log("Dekh aaya sucess kaisa");
