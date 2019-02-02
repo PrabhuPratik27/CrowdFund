@@ -26,7 +26,7 @@
         <div id = 'form-block' class="row">
             <div class="col-md-4"></div>
             <div id="form" class="col-md-4">
-                    <form class="form-horizontal" action="/#">
+                    <form class="form-horizontal" action="/#" onSubmit="App.store();">
                         <div class="form-group">
                         <label class="control-label col-md-4" for="tname">Team Name:</label>
                         <div class="col-md-8">
@@ -102,6 +102,10 @@
                     </form>
             </div>
             <div class="col-md-4"></div>
+
+            <script src="js/web3.min.js"></script>
+            <script src="js/truffle-contract.js"></script>
+            <script src="js/TeamReg.js"></script>
     </div>
   </body> 
 </html>
