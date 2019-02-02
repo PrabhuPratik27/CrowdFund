@@ -5,7 +5,8 @@
     padding-top: 2vh;
     background-blend-mode: lighten;
     font-size: 15px;
-    font-family: Quicksand-Regular
+    font-family: Quicksand-Regular;
+    margin-top : 10vh;
 }
 
 .form_group {
