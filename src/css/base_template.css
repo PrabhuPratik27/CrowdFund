@@ -1,12 +1,12 @@
 #navbar{
     font-family: CaviarDreams_BOLD;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 
 ul.navbar-nav a{
     font-size: 15px;
-    padding-left: 2cm;
+    display: block;
 }
 ul.navbar-nav a:hover{
     background-color: gray;
