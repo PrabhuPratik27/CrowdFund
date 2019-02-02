@@ -1,6 +1,8 @@
 pragma solidity 0.4.25;
 
-contract Projects{
+import "./Team.sol";
+
+contract Projects is Teams{
     
     struct Project {
         

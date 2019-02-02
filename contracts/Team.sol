@@ -33,7 +33,7 @@ contract Teams {
         
         teamcount++;
         Teammapint[teamcount] = Team(Tn,fn,sn,tn,ftn,fid,sid,tid,ftid);
-        Teammappaddr[teamcount] = msg.sender;
+        Teammapaddr[teamcount] = msg.sender;
         Teammap[msg.sender] = Team(Tn,fn,sn,tn,ftn,fid,sid,tid,ftid);
         
     }
@@ -50,7 +50,7 @@ contract Teams {
         return teamcount;
     }
 
-    function getTeambyint(uint i) returns (string){
+    function getTeambyint(uint i) public view returns (string){
         return Teammapint[i].TeamName;
     }
     
