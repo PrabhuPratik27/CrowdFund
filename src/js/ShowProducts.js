@@ -1,4 +1,5 @@
-App={
+App ={
+
     web3Provider: null,
     contracts: {},
   
@@ -35,29 +36,41 @@ App={
         // Connect provider to interact with contract
         App.contracts.Projects.setProvider(App.web3Provider);
       });
+
+      App.store();
     },
 
-    store : function(){
+    store: function(){
 
-        var name = document.querySelector('#tname').value;
-        var idea = document.querySelector('#text_area').value;
-        var quot = document.querySelector('#pwd').value;
-
-        console.log(name,idea,quot);
-        
-
-        App.contracts.Projects.deployed()
+        App.contract.Projects.deployed()
         .then(function(instance){
-            console.log("Inside the promise callback");
-            return instance.setProject(name,idea,quot);
+            var teamcount = instance.getCount();
         })
         .then(function(result){
-            console.log("Dekh aaya sucess kaisa");
-            
+            console.log("Dekh success aaya kaisa");
         })
         .catch(function(err){
-            console.log(err);   
+            console.log("Error aaya hai bhai",err);
+            
         })
 
+        for(var i=0;i<teamcount;i++){
+            App.contracts.Projects.deployed()
+            .then(function(instance){
+                var teamname = instance.getTeambyint(i);
+                var address = instance.getAddressbyint(i)
+                var Project = instace.getProjectbyaddress(address);
+                return Project;
+            })
+            .then(function(result){
+                console.log("Dekh success aaya kaisa");
+            })
+            .catch(function(err){
+                console.log("Error aaya hai bhai",err);
+                
+            })
+        }
+
+        console.log(teamname,Project);
     }
-};
+}

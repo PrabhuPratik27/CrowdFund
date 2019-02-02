@@ -50,6 +50,10 @@ contract Teams {
         return teamcount;
     }
 
+    function getAddressbyint(uint i) public view returns (address){
+        return Teammapaddr[i];
+    }
+
     function getTeambyint(uint i) public view returns (string){
         return Teammapint[i].TeamName;
     }

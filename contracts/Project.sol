@@ -1,8 +1,8 @@
 pragma solidity 0.4.25;
 
-import "./Team.sol";
+// import "./Team.sol";
 
-contract Projects is Teams{
+contract Projects {
     
     struct Project {
         
@@ -21,6 +21,10 @@ contract Projects is Teams{
     
     function getProject() public view returns(string,string,uint){
         return (Projectmap[msg.sender].title,Projectmap[msg.sender].idea,Projectmap[msg.sender].fund);
+    }
+
+    function getProjectbyaddress(address a) public view returns(string,string,uint){
+        return (Projectmap[a].title,Projectmap[a].idea,Projectmap[a].fund);
     }
     
 }
