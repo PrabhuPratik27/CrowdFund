@@ -1,0 +1,44 @@
+@font-face{
+    font-family: 'Quicksand-Regular';
+    src: url('Quicksand-Regular.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Quicksand-Bold';
+    src: url('Quicksand-Bold.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Greyscale_Basic_Regular';
+    src: url('Greyscale_Basic_Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Greyscale_Basic_Bold';
+    src: url('Greyscale_Basic_Bold.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'MavenPro-Regular';
+    src: url('MavenPro-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'MavenPro-Medium';
+    src: url('MavenPro-Medium.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'LemonMilklight';
+    src: url('LemonMilklight.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'CaviarDreams';
+    src: url('CaviarDreams.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'CaviarDreams_Bold';
+    src: url('CaviarDreams_Bold.ttf') format('truetype');
+}
