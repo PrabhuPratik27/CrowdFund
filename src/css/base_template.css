@@ -1,6 +1,17 @@
 body{
-    font-family: CaviarDreams;
+    font-family: CaviarDreams_BOLD;
     letter-spacing: 2px;
+}
+ul.navbar-nav a{
+    font-size: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+ul.navbar-nav a:hover{
+    background-color: gray;
+    color: aqua;
+    border-radius: 3px;
+    transition: all .1s ease;
 }
 @font-face{
     font-family: 'LemonMilklight';
