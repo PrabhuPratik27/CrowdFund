@@ -34,15 +34,23 @@
                     <form class="form-horizontal" action="#" onSubmit="App.store()">
                         <div class="form-group">
                         <div class="row">
-                            <label class="control-label col-md-4" for="tname">Project Name:</label>
+                            <label class="control-label col-md-4" for="tname">Project Name: *</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="tname" placeholder="Enter Project Name">
+                                <input type="text" class="form-control" id="tname" placeholder="Enter Project Name" required>
                             </div>
                         </div>
                         </div>
                         <div class="form-group">
+                                <div class="row">
+                                    <label class="control-label col-md-4" for="tname">Team Leader Name: *</label>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" id="tl" placeholder="Enter Leader Name" required>
+                                    </div>
+                                </div>
+                                </div>
+                        <div class="form-group">
                             <div class="row">
-                                <label class="control-label col-md-4" for="id">Idea Description <br> (in 1000 words):</label>
+                                <label class="control-label col-md-4" for="id">Idea Description *<br> (in 1000 words):</label>
                                 <div class="col-md-8">
                                     <textarea id="text_area" rows="5 " cols="43">
                                         
@@ -52,9 +60,9 @@
                         </div>
                         <div class="form-group">
                             <div class="row">
-                                <label class="control-label col-md-4" for="pwd">Quotation:</label>
+                                <label class="control-label col-md-4" for="pwd">Quotation: *</label>
                                 <div class="col-md-8"> 
-                                    <input type="text" class="form-control" id="pwd" placeholder="Enter Quotation Amount">
+                                    <input type="text" class="form-control" id="pwd" placeholder="Enter Quotation Amount" required>
                                 </div>
                             </div>
                         </div>
