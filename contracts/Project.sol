@@ -9,19 +9,21 @@ contract Projects {
         string title;
         string idea;
         uint fund;
-        string teamleader; 
+        // string teamleader; 
         
     }
     
-    mapping(uint => Project) public Projectmap;
+    mapping(address => Project) public Projectmap;
+    mapping(uint => address) public Ati;
     uint public projectCount;
     
-    function setProject(string t,string i,uint f,string tl) public {
+    function setProject(string t,string i,uint f) public {
         projectCount++;
-        Projectmap[projectCount] = Project(t,i,f,tl);
+        Ati[projectCount]=msg.sender;
+        Projectmap[msg.sender] = Project(t,i,f);
     }
 
-    function getProjectbyaddress(uint a) public view returns(string,string,uint){
+    function getProjectbyaddress(address a) public view returns(string,string,uint){
         return (Projectmap[a].title,Projectmap[a].idea,Projectmap[a].fund);
     }
     
