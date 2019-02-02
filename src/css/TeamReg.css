@@ -1,11 +1,12 @@
-#m-email {
-    text-align: right;
-}
-
 #form {
     border: 10vh;
     border-width: 5vh;
-    text-emphasis: center;
+    text-align: center;
     padding: 5vh;
+    background-blend-mode: lighten;
     
+}
+
+.form_group {
+    padding: 5vh;
 }
