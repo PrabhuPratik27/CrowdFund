@@ -58,25 +58,26 @@ App = {
       })
       .then(function(result){
 
-        console.log(result);
+        // console.log(result);
         
         // alert(result);
-        App.password = result;
-        console.log(App.password,pwd);
-        if(pwd && App.password===pwd) {
-          alert("equal");
-          window.location.replace = "./product_reg.html";
+        
+        // console.log(result,pwd);
+        if(pwd && result===pwd) {
+          alert("logged in!");
+          window.location = "./product_reg.html";
         }
         else {
-          alert("wrong");
-          window.location.replace = "./login.html";
+          alert("enter correct credentials");
+          window.location = "./login.html?#";
         }
         
       })
       .catch(function(err) {
         console.log(err);
-      })
-
+      });
+      
+      
       
 
         
