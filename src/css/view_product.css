@@ -1,7 +1,15 @@
 @import "fonts.css";
 
 #cards {
+    margin: 0 auto;
+    padding: 0vh;
     padding-top: 5vh;
+    
+}
+
+#embedded {
+    margin: 0% auto;
+    padding-right: 1vh;
 }
 
 h4{

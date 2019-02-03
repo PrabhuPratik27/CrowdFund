@@ -127,16 +127,19 @@ App ={
             embedded.empty();
 
             console.log(App.Projects);
+            // console.log(embedded.innerHTML);
 
-            for(let i=1;i<=App.teamcount;i++){
+            for(let i=0;i<App.teamcount;i++){
+                // console.log(i);
+                
                 var extra = "<div class=col-md-4>\
-                                    <div class=\"card text-white bg-dark  mb-3 border border-primary\" style=\"width:25rem\">\
+                                    <div class=\"card text-white bg-dark  mb-3 border border-primary\" style=\"width:58vh\">\
                                         <img class=\"card-img-top p-3\" src=blockchain.jpg style=width:100%>\
                                         <div class=card-body>\
-                                            <h4 class=card-title>this is title</h4>\
-                                            <p class=card-body></p>\
-                                            <p class=card-text>Quotation : $ </p>\
-                                            <a href=# class=\"btn btn-success\">Fund Project</a>\
+                                            <h4 class=card-title>"+App.Projects[i][0]+"</h4>\
+                                            <p class=card-body style=\"font-size:1.2em\">"+App.Projects[i][1]+"</p>\
+                                            <p class=card-text style=\"font-size:1.5em\" >Quotation : $"+App.Projects[i][2].toNumber()+" </p>\
+                                            <a href=# class=\"btn btn-success\"style=\"font-size:1.5em\">Fund Project</a>\
                                         </div>\
                                     </div>\
                                 </div>";
