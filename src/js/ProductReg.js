@@ -52,6 +52,7 @@ App={
             return instance.setProject(name,idea,quot);
         })
         .then(function(result){
+          // alert('result dekh', result);
             console.log("Dekh aaya sucess kaisa");
             
         })

@@ -4,6 +4,7 @@ App ={
     contracts: {},
     Projects : [],
     teamname: [],
+    address : [],
   
     init: function() {
 
@@ -34,7 +35,7 @@ App ={
         // Instantiate a new truffle contract from the artifact
         App.contracts.Projects = TruffleContract(projects);
 
-        console.log("This is projects",App.contracts.Projects);
+        // console.log("This is projects",App.contracts.Projects);
 
         // Connect provider to interact with contract
         App.contracts.Projects.setProvider(App.web3Provider);
@@ -44,42 +45,87 @@ App ={
         // Instantiate a new truffle contract from the artifact
         App.contracts.Teams = TruffleContract(teams);
 
-        console.log("This is teams",App.contracts.Teams);
+        // console.log("This is teams",App.contracts.Teams);
 
         // Connect provider to interact with contract
         App.contracts.Teams.setProvider(App.web3Provider);
       });
 
-      setTimeout(App.store,3000);   
+      setTimeout(App.store,1000);   
       
     },
 
     store: function(){
 
-        App.contracts.Teams.deployed()
+        App.contracts.Projects.deployed()
         .then(function(instance){
 
-            return instance.teamcount();
-            
-            
+            return instance.projectCount();
+
         })
         .then(function(result){
+                        
+            App.projectCount = result.toNumber();
+                        
+        })
+        .catch(function(err){
+            console.log(err);
+                        
+        });
+
+        App.contracts.Teams.deployed()
+        .then(function(instance){
+            return instance.teamcount();
+        })
+        .then(function(result){
+
+            console.log(result.toNumber());
             
             App.teamcount = result.toNumber();
-            console.log(result.toNumber());
 
-            for(var i=1;i<=App.teamcount;){
-
+            for(let i=1;i<=App.teamcount;i++){
                 App.contracts.Teams.deployed()
                 .then(function(instance){
-
-                    console.log(i);
-                    return instance.Teammapaddr(i)
-            
+                    return instance.getAddressbyint(i);
                 })
                 .then(function(result){
                     
-                    console.log(result);
+                    App.address.push(result);
+                    console.log("address "+i,result);
+                    
+                    
+                })
+                .then(function(){
+                    App.contracts.Projects.deployed()
+                    .then(function(instance){
+
+                        console.log(i,App.teamcount);
+                        
+                        return instance.getProjectbyaddress(App.address[i-1]);
+                    })
+                    .then(function(result){
+                        if(result[0] != "")
+                            App.Projects.push(result);
+                        
+                    })
+                    .catch(function(err){
+                        console.log(err);
+                        
+                    });
+                })
+                .catch(function(err){
+                    console.log(err);
+                    
+                }) 
+
+                App.contracts.Teams.deployed()
+                .then(function(instance){
+                    return instance.getTeambyint(i);
+                })
+                .then(function(result){
+    
+                    App.teamname.push(result)
+                    
                 })
                 .catch(function(err){
                     console.log(err);
@@ -87,11 +133,11 @@ App ={
                 })
 
             }
-
+    
 
         })
         .catch(function(err){
-            console.log(err); 
+            console.log(err);
         })
 
 
@@ -102,7 +148,7 @@ App ={
             console.log(App.Projects);
             // console.log(embedded.innerHTML);
 
-            for(let i=0;i<App.teamcount;i++){
+            for(let i=0;i<App.projectCount;i++){
                 // console.log(i);
                 
                 var extra = "<div class=col-md-4>\
