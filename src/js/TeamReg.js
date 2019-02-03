@@ -61,10 +61,10 @@ App = {
           return instance.setTeam(ten,fn,sn,tn,ftn,fid,sid,tid,ftid);
       })
       .then(function(result){ 
-          console.log("Dekh abhi sucess hua hai");
+          console.log("sahi ", result);
       })
       .catch(function(err){
-          console.log("error aaya bhai");
+          console.log("galat", err);
       });
 
       App.contracts.Teams.deployed()
