@@ -139,7 +139,7 @@ App ={
                                             <h4 class=card-title>"+App.Projects[i][0]+"</h4>\
                                             <p class=card-body style=\"font-size:1.2em\">"+App.Projects[i][1]+"</p>\
                                             <p class=card-text style=\"font-size:1.5em\" >Quotation : $"+App.Projects[i][2].toNumber()+" </p>\
-                                            <a href=# class=\"btn btn-success\"style=\"font-size:1.5em\">Fund Project</a>\
+                                            <a href=# class=\"btn btn-success\"style=\"font-size:1.5em\" id=\"fund\">Give Fund</a>\
                                         </div>\
                                     </div>\
                                 </div>";
