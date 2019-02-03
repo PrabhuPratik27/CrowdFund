@@ -93,7 +93,36 @@ App ={
         .catch(function(err){
             console.log(err); 
         })
+<<<<<<< HEAD
         
+=======
+
+
+        setTimeout(function(){
+            var embedded = $('#embedded');
+            embedded.empty();
+
+            console.log(App.Projects);
+            // console.log(embedded.innerHTML);
+
+            for(let i=0;i<App.teamcount;i++){
+                // console.log(i);
+                
+                var extra = "<div class=col-md-4>\
+                                    <div class=\"card text-white bg-dark  mb-3 border border-primary\" style=\"width:58vh\">\
+                                        <img class=\"card-img-top p-3\" src=blockchain.jpg style=width:100%>\
+                                        <div class=card-body>\
+                                            <h4 class=card-title>"+App.Projects[i][0]+"</h4>\
+                                            <p class=card-body style=\"font-size:1.2em\">"+App.Projects[i][1]+"</p>\
+                                            <p class=card-text style=\"font-size:1.5em\" >Quotation : $"+App.Projects[i][2].toNumber()+" </p>\
+                                            <a href=# class=\"btn btn-success\"style=\"font-size:1.5em\" id=\"fund\">Give Fund</a>\
+                                        </div>\
+                                    </div>\
+                                </div>";
+                embedded.append(extra);
+            }
+        },1000);
+>>>>>>> 6a1f419a4b1be285cf9c8c253cd660039e9491bb
 
     }
 }
