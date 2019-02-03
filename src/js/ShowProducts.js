@@ -93,9 +93,6 @@ App ={
         .catch(function(err){
             console.log(err); 
         })
-<<<<<<< HEAD
-        
-=======
 
 
         setTimeout(function(){
@@ -122,7 +119,6 @@ App ={
                 embedded.append(extra);
             }
         },1000);
->>>>>>> 6a1f419a4b1be285cf9c8c253cd660039e9491bb
 
     }
 }

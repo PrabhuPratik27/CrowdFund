@@ -58,7 +58,7 @@ App = {
       })
       .then(function(result){
 
-        // console.log(result);
+        console.log(result);
         
         // alert(result);
         
