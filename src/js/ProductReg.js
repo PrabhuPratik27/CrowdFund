@@ -30,7 +30,7 @@ App={
         // Instantiate a new truffle contract from the artifact
         App.contracts.Projects = TruffleContract(projects);
 
-        // console.log(App.contracts.Teams);
+        console.log(App.contracts.Projects);
 
         // Connect provider to interact with contract
         App.contracts.Projects.setProvider(App.web3Provider);

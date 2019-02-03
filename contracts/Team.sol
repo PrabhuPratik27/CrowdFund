@@ -21,7 +21,8 @@ contract Teams {
     mapping(address => Team) public Teammap ;
     mapping(uint => address) public Teammapaddr;
     uint public teamcount;
-    mapping(uint => string) public PasswordMap;
+    // mapping(uint => string) public PasswordMap;
+    //mapping(address => string) private PasswordMap;
     
     constructor() public {
         
@@ -40,7 +41,12 @@ contract Teams {
     }
     
     function setPassword(string pass) public{
+        //PasswordMap[Teammapaddr[teamcount]] = pass;
         password=pass;
+    }
+
+    function getPasswordByAddress() public view returns (string) {
+        return password;
     }
     
     function getTeam() public view returns (string,string,string,string,string,uint,uint,uint,uint){
